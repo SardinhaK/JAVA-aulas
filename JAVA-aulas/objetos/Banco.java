@@ -8,6 +8,7 @@ public class Banco{
 
     public Banco () {
         contas = new Conta[100];
+        poupancas = new Poupanca[100];
     }
     public void cadastarConta(Conta c){
         contas[indice] = c;

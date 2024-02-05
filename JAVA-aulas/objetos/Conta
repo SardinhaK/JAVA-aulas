@@ -1,0 +1,34 @@
+package objetos;
+public class conta {
+    private double saldo;
+    private int Conta;
+
+    public int getConta(){
+        return Conta;
+    }
+
+    public void setConta(int Conta){
+        this.Conta = Conta;
+    }
+
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
+    }
+
+    public void Creditar(double valor){
+        saldo += valor;
+    }
+
+    public void Debitar(double valor){
+        saldo -= valor;
+    }
+
+    public void Transferir(conta destino, double valor){
+        this.Debitar(valor);
+        destino.Creditar(valor);
+    }
+}
